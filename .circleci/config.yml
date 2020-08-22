@@ -47,7 +47,4 @@ workflows:
      - Run-With-Node:
          requires:
            - Hello-World
-     - Now-Complete:
-         requires:
-           - Hold-For-Approval
 
