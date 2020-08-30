@@ -4,6 +4,7 @@ import LazyloadImg from './components/LazyLoadImg'
 
 function App() {
   return (
+    <>
     <div style={{ textAlign: 'center' }}>
       <div>
         <LazyloadImg url="https://i.pinimg.com/564x/9f/ef/bf/9fefbf39bf0a8cd5b5c8ea6e92ded682.jpg" />
@@ -52,6 +53,15 @@ function App() {
       </div>
 
     </div>
+      <a
+        className="App-link"
+        href="https://reactjs.org"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Learn React
+        </a>
+    </>
   );
 }
 
