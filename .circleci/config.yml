@@ -33,11 +33,7 @@ workflows:
  version: 2
  Example_Workflow:
    jobs:
-    - Run-Test:
-        filters:
-          branches:
-           only: develop
-
+    - Run-Test
     - Deloy-Serve:
         requires:
          - Run-Test
