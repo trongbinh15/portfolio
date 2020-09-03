@@ -1,0 +1,42 @@
+version: 2.1
+jobs:
+  Run-Test:
+    docker:
+      - image: node
+    steps:
+      - checkout
+      - restore_cache:
+          key: npm-cache-v1-{{ checksum "package-lock.json" }}
+      - run:
+          name: Install Dependencies
+          command: npm ci
+      - save_cache:
+          key: npm-cache-v1-{{ checksum "package-lock.json" }}
+          paths:
+            - /home/circleci/.npm
+      - run:
+          name: Run Test 
+          command: 
+            npm test
+  Deloy-Serve:
+    docker:
+      - image: alpine:3.7
+    steps:
+      - checkout
+      - run:
+          name: Deloy Github Page
+          command: 
+            npm run deploy
+
+workflows:
+ version: 2
+ Dev_Workflow:
+   jobs:
+    - Run-Test
+    - Deloy-Serve:
+        requires:
+         - Run-Test
+        filters:
+          branches:
+           only: master
+
