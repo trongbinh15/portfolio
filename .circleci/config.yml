@@ -25,13 +25,12 @@ jobs:
       - checkout
       - run:
           name: Deloy Github Page
-          command: |
-            ls -al
-            echo 'Deloy ne'
+          command: 
+            npm run deploy
 
 workflows:
  version: 2
- Example_Workflow:
+ Dev_Workflow:
    jobs:
     - Run-Test
     - Deloy-Serve:
@@ -39,5 +38,5 @@ workflows:
          - Run-Test
         filters:
           branches:
-           only: develop
+           only: master
 
