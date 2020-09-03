@@ -20,7 +20,7 @@ jobs:
             npm test
   Deloy-Serve:
     docker:
-      - image: alpine:3.7
+      - image: node
     steps:
       - checkout
       - run:
