@@ -33,6 +33,23 @@ jobs:
           paths:
             - /home/circleci/.npm
       - run:
+          name: Config Github
+          command: |
+            git config user.email "trongbinhnguyen15@gmail.com"
+            git config user.name "trongbinhnguyen15"
+      - add_ssh_keys:
+          fingerprints:
+            - "fd:ed:9c:44:3a:9e:ef:4a:74:c7:9d:ac:60:2b:46:40"
+      - restore_cache:
+          key: npm-cache-v1-{{ checksum "package-lock.json" }}
+      - run:
+          name: Install Dependencies
+          command: npm ci
+      - save_cache:
+          key: npm-cache-v1-{{ checksum "package-lock.json" }}
+          paths:
+            - /home/circleci/.npm
+      - run:
           name: Deloy Github Page
           command: 
             npm run deploy
@@ -48,4 +65,5 @@ workflows:
         filters:
           branches:
            only: master
+          
 
