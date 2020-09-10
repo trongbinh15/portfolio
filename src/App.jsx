@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import './App.css';
-import NavBar from './components/nav-bar/nav-bar';
+import HomeComponent from './components/HomeComponent/home';
+
+const NavBar = lazy(() => import('./components/nav-bar/nav-bar'));
+
+const renderLoader = () => <p>Loading</p>;
 
 function App() {
   return (
     <>
-      <NavBar></NavBar>
-      <section id="home"></section>
-      <section id="about"></section>
-      <section id="experiences"></section>
-      <section id="interest"></section>
-      <section id="contact"></section>
-      <footer></footer>
+      <Suspense fallback={renderLoader()}>
+        <NavBar></NavBar>
+        <section id="home">
+          <HomeComponent></HomeComponent>
+        </section>
+        <section id="about"></section>
+        <section id="experiences"></section>
+        <section id="interest"></section>
+        <section id="contact"></section>
+        <footer></footer>
+      </Suspense>
     </>
   );
 }
