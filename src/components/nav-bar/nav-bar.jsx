@@ -28,16 +28,16 @@ const NavBar = () => {
                         <a href="#home">Home</a>
                     </li>
                     <li>
-                        <a href="about">About</a>
+                        <a href="#about">About</a>
                     </li>
                     <li>
-                        <a href="experiences">Experiences</a>
+                        <a href="#experiences">Experiences</a>
                     </li>
                     <li>
-                        <a href="interest">Interest</a>
+                        <a href="#interest">Interest</a>
                     </li>
                     <li>
-                        <a href="contact">Contact</a>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
                 <div className={burgerClass} onClick={e => toggleNavbar(e)}  >
