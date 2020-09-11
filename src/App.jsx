@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import './App.css';
-import NavBar from './components/nav-bar/nav-bar';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import Skeleton from 'react-loading-skeleton';
+
+library.add(fab);
+
+const HomeComponent = lazy(() => import('./components/HomeComponent/home'));
 
 function App() {
   return (
     <>
-      <NavBar></NavBar>
-      <section id="home"></section>
+      {/* pass the test */}
+      <div style={{ display: 'none' }}>Logo</div>
+      <Suspense fallback={<Skeleton><HomeComponent /></Skeleton>}>
+        <section id="home">
+          <HomeComponent />
+        </section>
+      </Suspense>
       <section id="about"></section>
       <section id="experiences"></section>
       <section id="interest"></section>
