@@ -4,6 +4,10 @@
   "private": true,
   "homepage": "https://trongbinh15.github.io/portfolio",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -13,6 +17,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-lazyload": "^3.0.0",
+    "react-loading-skeleton": "^2.1.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
     "react-test-renderer": "^16.13.1",
