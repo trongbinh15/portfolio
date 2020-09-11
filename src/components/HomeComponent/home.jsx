@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy } from 'react';
 import styled from './home-styles.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
