@@ -29,7 +29,14 @@
             text-decoration: none;
             letter-spacing: 3px;
             font-weight: bold;
+
+            &:hover {
+                color: $primary-color;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: white;
+            }
         }
+
     }
 
     .burger {
