@@ -4,9 +4,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../asset/images/pexels-pixabay-373076.jpg) no-repeat center;
-    background-size: cover;
     height: 100vh;
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        height: 100vh;
+        width: 100vw;
+        z-index: -1;
+        filter: brightness(50%);
+    }
 
     .inner-width {
         display: flex;
