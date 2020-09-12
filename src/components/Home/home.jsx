@@ -1,14 +1,17 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy } from 'react';
 import styled from './home-styles.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import background from '../../asset/images/pexels-pixabay-373076.jpg';
+import ImageLoading from '../ImageLoading/image-loading';
 
-const NavBar = lazy(() => import('../nav-bar/nav-bar'));
+const NavBar = lazy(() => import('../NavBar/nav-bar'));
 
 function HomeComponent() {
     return (
         <>
             <div className={styled['container']}>
-                <NavBar></NavBar>
+                <NavBar />
+                <ImageLoading src={background} className={styled['background']} />
                 <div className={styled['inner-width']}>
                     <div className={styled['content']}>
                         <h1> </h1>

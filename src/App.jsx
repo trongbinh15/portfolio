@@ -6,14 +6,14 @@ import Skeleton from 'react-loading-skeleton';
 
 library.add(fab);
 
-const HomeComponent = lazy(() => import('./components/HomeComponent/home'));
+const HomeComponent = lazy(() => import('./components/Home/home'));
 
 function App() {
   return (
     <>
       {/* pass the test */}
       <div style={{ display: 'none' }}>Logo</div>
-      <Suspense fallback={<Skeleton><HomeComponent /></Skeleton>}>
+      <Suspense fallback={<Skeleton height={'100vh'} ></Skeleton>}>
         <section id="home">
           <HomeComponent />
         </section>
