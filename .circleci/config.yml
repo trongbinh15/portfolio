@@ -18,7 +18,7 @@ jobs:
           name: Run Test 
           command: 
             npm test
-  Deloy-Serve:
+  Deploy-Serve:
     docker:
       - image: node
     steps:
@@ -50,7 +50,7 @@ jobs:
           paths:
             - /home/circleci/.npm
       - run:
-          name: Deloy Github Page
+          name: Deploy Github Page
           command: 
             npm run deploy
 
@@ -59,7 +59,7 @@ workflows:
  Dev_Workflow:
    jobs:
     - Run-Test
-    - Deloy-Serve:
+    - Deploy-Serve:
         requires:
          - Run-Test
         filters:
