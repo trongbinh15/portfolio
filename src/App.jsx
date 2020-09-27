@@ -7,6 +7,7 @@ import Skeleton from 'react-loading-skeleton';
 library.add(fab);
 
 const HomeComponent = lazy(() => import('./components/Home/home'));
+const AboutComponent = lazy(() => import('./components/About/about'));
 
 function App() {
   return (
@@ -18,7 +19,11 @@ function App() {
           <HomeComponent />
         </section>
       </Suspense>
-      <section id="about"></section>
+      <Suspense fallback={<Skeleton height={'100vh'}></Skeleton>}>
+        <section id="about">
+          <AboutComponent />
+        </section>
+      </Suspense>
       <section id="experiences"></section>
       <section id="interest"></section>
       <section id="contact"></section>

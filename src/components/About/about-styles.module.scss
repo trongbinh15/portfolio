@@ -1,0 +1,23 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: whitesmoke;
+
+    .inner-width {
+        .content {
+            .skills {
+                display: flex;
+                flex-direction: row;
+
+            }
+
+        }
+
+        .a {
+            font-weight: 900;
+            height: 100px;
+        }
+
+    }
+
+}
