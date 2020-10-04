@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from './progress-bar.module.scss';
-function ProgressBar({ name, value, color, style }) {
+function ProgressBar({ name, value, color, className }) {
 
     const progressStyled = {
         width: value * 100 + '%',
@@ -9,7 +9,7 @@ function ProgressBar({ name, value, color, style }) {
 
     return (
         <>
-            <div className={styled['container']} style={style}>
+            <div className={`${styled['container']} ${className}`}>
                 <div className={styled['information']}>
                     <span>{name}</span>
                     <span>{value * 100}%</span>
