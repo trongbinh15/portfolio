@@ -6,7 +6,6 @@
     padding: 0;
     box-sizing: border-box;
     height: 100vh;
-    width: calc(100vw - 10px);
 
     .background {
         position: absolute;
@@ -14,7 +13,7 @@
         left: 0;
         object-fit: cover;
         height: 100vh;
-        width: 100%;
+        width: 100vw;
         z-index: -1;
         filter: brightness(50%);
     }
@@ -80,14 +79,14 @@
 
 @keyframes textanim {
     25% {
-        content: "Normal Guy";
+        content: "A Developer";
     }
 
     50% {
-        content: "Fullstack Developer";
+        content: "A Designer";
     }
 
     75% {
-        content: "Nice to meet you :D";
+        content: "A Coder";
     }
 }
